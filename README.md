@@ -1,6 +1,6 @@
-# Wrapper Laravel de Alfredo
+# Cliente Laravel de Alfredo
 
-Copia `AlfredoClient.php` en tu aplicación (por ejemplo, `app/Services/AlfredoClient.php`) y ajusta su namespace si procede. No necesita dependencias: usa el cliente HTTP incluido en Laravel.
+Instálalo con Composer cuando se publique como `alfredosend/laravel`. Usa el cliente HTTP que Laravel ya incluye.
 
 ```php
 use Alfredo\AlfredoClient;
