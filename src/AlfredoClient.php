@@ -18,7 +18,7 @@ final class AlfredoClient
     public function sendTransactional(string $templateId, array $payload, ?string $idempotencyKey = null): array
     {
         $request = $this->request();
-        if ($idempotencyKey) $request = $request->withHeader('Idempotency-Key', $idempotencyKey);
+        if ($idempotencyKey) $request = $request->withHeaders(['Idempotency-Key' => $idempotencyKey]);
 
         return $request->post("/v1/clients/{$this->clientId}/transactional/templates/{$templateId}/send", $payload)
             ->throw()
